@@ -1,0 +1,23 @@
+# Pinned with floors (and, where an untested major bump exists upstream,
+# ceilings) as of July 2026 — previously this file had zero version
+# constraints, so `pip install -r requirements.txt` could silently pull
+# in a breaking major release months from now and nobody would know why
+# MARROW stopped working until they diffed a changelog.
+#
+# yt-dlp is the deliberate exception: it has NO upper bound and should be
+# kept current with `pip install -U yt-dlp` regularly. YouTube changes
+# its site/APIs often enough that an old yt-dlp is one of the most common
+# real-world causes of "downloads/transcripts suddenly stopped working" —
+# pinning it tightly would trade a rare problem (a breaking yt-dlp release)
+# for a near-certain one (falling behind YouTube).
+requests>=2.31,<3
+Pillow>=10.0,<13
+opencv-python>=4.9,<5        # 5.x exists on PyPI but is untested against this code — stay on 4.x
+numpy>=1.26,<3
+markdown>=3.5,<4
+pypdf>=5.0,<7
+reportlab>=4.0,<5            # 5.x exists on PyPI but is untested against this code — stay on 4.x
+youtube-transcript-api>=1.0,<2
+yt-dlp>=2025.6.0              # no upper bound intentionally — see note above
+rich>=13.0,<16
+prompt_toolkit>=3.0.43,<4

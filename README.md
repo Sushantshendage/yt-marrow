@@ -57,8 +57,8 @@ you run it, then remembers everything.
 ## Quick start
 
 ```bash
-git clone https://github.com/Sushantshendage/yt-marrow.git
-cd yt-marrow 
+git clone https://github.com/Sushantshendage/MARROW-AI.git
+cd MARROW-AI
 pip install -r requirements.txt   # or skip this — MARROW installs anything missing on first run
 python marrow.py
 ```
